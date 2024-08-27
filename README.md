@@ -3,7 +3,7 @@
 ## Program
 The program solves the following problem by going through every possible scenario and finding the highest probability. The alternative is to solve the problem mathematically but that requires a bit more... pizzazz.
 
-The console output shows a list of five coins `[['H', 'E'], ...]` where `'H'` is the letter on one side of the coin and `'E'` is the letter on the other side of the coin. Under each list of coins, the probability that "HELLO" is drawn is shown. To avoid printing all $4^10 = 1,048,576$ different coin combinations, only the coins with the highest probability are shown.
+The console output shows a list of five coins `[['H', 'E'], ...]` where `'H'` is the letter on one side of the coin and `'E'` is the letter on the other side of the coin. Under each list of coins, the probability that "HELLO" is drawn is shown. To avoid printing all $4^{10} = 1,048,576$ different coin combinations, only the coins with the highest probability are shown.
 
 ### Usage
 Run the python file in a console
@@ -29,8 +29,8 @@ In this favorable scenario, what is the probability that the letters on the coin
 ## Solution
 The result from the console output shows that in a scenario where the coin markings result in a favorable (highest) probability, the probability is $\dfrac{12}{3840} = 0.003125$.
 
-When first attempting to solve the problem, one might think that they should determine which specific coin markings would result in a favorable scenario. However there are many different coin markings that cause such a scenario and as seen in the brute force approach that the program took. There are 960 favorable scenarios out of 1,048,576 scenarios. Instead the solution involves finding the characteristic that a favorable scenario entails.
+When first attempting to solve the problem, one might think that they should determine which specific coin markings would result in a favorable scenario. However there are many different coin markings that cause such a scenario and as seen in the brute force approach that the program took, there are 960 favorable scenarios out of 1,048,576 scenarios. Instead the solution involves finding the characteristic that a favorable scenario entails.
 
 The characteristic is that in a favorable scenario, there are 12 ways of rearranging the coins to obtain HELLO. Five coins have $5! = 120$ permutations. Thus, the probability that the coins are drawn in the right order is $\dfrac{12}{120} = \dfrac{1}{10}$. The probability that a coin is flipped to the side with the correct letter is $\dfrac{1}{2}$. So the probability that all coins are flipped to the correct side is $\dfrac{1}{2^5}$. So the probability of HELLO --coins drawn in correct order and with correct side up-- is $\dfrac{1}{10} * \dfrac{1}{2^5} = \dfrac{1}{320} = 0.003125$. This result matches what the program outputted.
 
-Now the problem I am stuck on is proving where 12 came from.
+Now the problem I am stuck on is proving where 12 came from in a mathematical way without the brute force approach.
