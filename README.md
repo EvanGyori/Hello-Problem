@@ -12,6 +12,8 @@ python HelloProblem.py
 ```
 
 ## Problem Statement
+The problem was found at https://math.bot/q/probability-spelling-hello-marked-coins-3ii8RT1
+
 A set of five quarters was marked with a permanent marker. A random English language letter was written on the face of each coin. On the back of each coin, a different random English language letter was written. All of the letters written on the coins are upper-case.
 
 
